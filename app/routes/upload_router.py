@@ -4,8 +4,8 @@ from fastapi.responses import JSONResponse
 import pandas as pd
 from app.services.detection_service import detect_equipment_events
 from fastapi.security import OAuth2PasswordBearer
-from auth.jwt_handler import verify_token
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
+from app.auth.jwt_handler import verify_token
 
 router = APIRouter()
 
